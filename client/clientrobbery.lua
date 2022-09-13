@@ -184,10 +184,8 @@ AddEventHandler('tofjew:menus', function()
                             if GetGameTimer() > nextVitrin then
                                 if robstate == false then  
                                     TriggerServerEvent('tofjew:onrob', coord, zone) -- verify the cooldown
-                                    print('robstate false')
                                 end
                                 if robstate == true then
-                                    print('robstate true')
                                     TriggerServerEvent('tofjew:zonerobon', coord, zone)
                                 end 
                             else
@@ -223,7 +221,6 @@ end)
 
 local function SetnextVitrin()
     nextVitrin = GetGameTimer() + cd
-    print(cd)
 end    
 
 -----------------------------------------------------------------------------------------------------------------------
@@ -254,15 +251,12 @@ end)
 
 RegisterNetEvent('tofjew:breakglass')
 AddEventHandler('tofjew:breakglass', function(coord)
-    print('client action')
     ------------------- alarm -------------------------------
     if codealarm == false then
         PlaySoundFromCoord(alarmid, "VEHICLES_HORNS_AMBULANCE_WARNING", -624.27, -232.19, 39.06, '', true, 10, false ) 
-        print('alarm on')
     end
     ------------------- fin alarm -------------------------------
         SetnextVitrin()
-        print('breakglass')
         PlaySoundFromCoord(-1, 'Glass_Smash', coord.x, coord.y, coord.z, '', true, 5, false)
         if not HasNamedPtfxAssetLoaded('scr_jewelheist') then RequestNamedPtfxAsset('scr_jewelheist') end
         while not HasNamedPtfxAssetLoaded('scr_jewelheist') do Citizen.Wait(0) end
@@ -291,7 +285,6 @@ end)
 
 RegisterNetEvent('tofjew:searchcode')
 AddEventHandler('tofjew:searchcode', function()
-    print('client searchcode')
     if robstate == true then
         local findchance = math.random(1,4)
         if findchance == 1 then
