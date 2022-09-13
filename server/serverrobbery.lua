@@ -25,7 +25,6 @@ end
 
 RegisterServerEvent('tofjew:onrob')
 AddEventHandler('tofjew:onrob', function(coord, zone)
-    print('verif on rob')
     local xPlayer = ESX.GetPlayerFromId(source)
     local xPlayers = ESX.GetPlayers()
 	local copsOnline = 0
@@ -60,7 +59,6 @@ AddEventHandler('tofjew:onrob', function(coord, zone)
                 zonedonevit8 = false
                 zonedonevit9 = false
                 zonedonevit10 = false
-                print('envoi client robstate')
                 TriggerClientEvent('tofjew:robstate', xPlayer.source)
                 Citizen.Wait(500)
                 TriggerEvent('tofjew:alarmcode_s', xPlayer.source)
@@ -74,13 +72,11 @@ AddEventHandler('tofjew:onrob', function(coord, zone)
             end
         end
         if nextrob == 0 then
-            print('envoi client robstate')
             TriggerClientEvent('tofjew:robstate', xPlayer.source)
             SetNextRob()
             Citizen.Wait(500)
             TriggerEvent('tofjew:alarmcode_s', xPlayer.source)
             TriggerEvent('tofjew:zone', xPlayer.source, coord, zone)
-            print('envoi verif zone')
             for j=1, #xPlayers, 1 do
                 local xPlayer = ESX.GetPlayerFromId(xPlayers[j])
                 if xPlayer.job.name == 'police' or xPlayer.job.name == 'offpolice' then     -- modify here if you want or not take care about the offpolice
@@ -90,7 +86,6 @@ AddEventHandler('tofjew:onrob', function(coord, zone)
         end
     else
         TriggerClientEvent('tofjew:nocops', xPlayer.source)
-        print('no cops')
     end
 end)
 
@@ -98,70 +93,60 @@ RegisterServerEvent('tofjew:zone')
 AddEventHandler('tofjew:zone', function(source, coord, zone)
     local xPlayer = ESX.GetPlayerFromId(source)
     if zone == 'vit1' and zonedonevit1 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit1' and zonedonevit1 == false then
         zonedonevit1 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit2' and zonedonevit2 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit2' and zonedonevit2 == false then
         zonedonevit2 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit3' and zonedonevit3 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit3' and zonedonevit3 == false then
         zonedonevit3 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit4' and zonedonevit4 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit4' and zonedonevit4 == false then
         zonedonevit4 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit5' and zonedonevit5 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit5' and zonedonevit5 == false then
         zonedonevit5 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit6' and zonedonevit6 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit6' and zonedonevit6 == false then
         zonedonevit6 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit7' and zonedonevit7 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit7' and zonedonevit7 == false then
         zonedonevit7 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit8' and zonedonevit8 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit8' and zonedonevit8 == false then
         zonedonevit8 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit9' and zonedonevit9 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit9' and zonedonevit9 == false then
         zonedonevit9 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit10' and zonedonevit10 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit10' and zonedonevit10 == false then
         zonedonevit10 = true
@@ -173,70 +158,60 @@ RegisterServerEvent('tofjew:zonerobon')
 AddEventHandler('tofjew:zonerobon', function(coord, zone)
     local xPlayer = ESX.GetPlayerFromId(source)
     if zone == 'vit1' and zonedonevit1 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit1' and zonedonevit1 == false then
         zonedonevit1 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit2' and zonedonevit2 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit2' and zonedonevit2 == false then
         zonedonevit2 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit3' and zonedonevit3 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit3' and zonedonevit3 == false then
         zonedonevit3 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit4' and zonedonevit4 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit4' and zonedonevit4 == false then
         zonedonevit4 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit5' and zonedonevit5 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit5' and zonedonevit5 == false then
         zonedonevit5 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit6' and zonedonevit6 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit6' and zonedonevit6 == false then
         zonedonevit6 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit7' and zonedonevit7 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit7' and zonedonevit7 == false then
         zonedonevit7 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit8' and zonedonevit8 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit8' and zonedonevit8 == false then
         zonedonevit8 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit9' and zonedonevit9 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit9' and zonedonevit9 == false then
         zonedonevit9 = true
         TriggerClientEvent('tofjew:breakglass', xPlayer.source, coord)
     end
     if zone == 'vit10' and zonedonevit10 == true then
-        print(zone)
         TriggerClientEvent('tofjew:zonealreadydone', xPlayer.source)
     elseif zone == 'vit10' and zonedonevit10 == false then
         zonedonevit10 = true
