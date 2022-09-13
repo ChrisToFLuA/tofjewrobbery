@@ -5,7 +5,7 @@ lua54 'yes'
 
 name         'toffleeca'
 version      '1.0.0'
-description  'Fleeca Robbery system'
+description  'Jewels Robbery system'
 author       'ChrisToF29380'
 repository   'https://github.com/ChrisToFLuA/ToFFleeca'
 
@@ -28,8 +28,4 @@ shared_scripts {
 	'locales/fr.lua',
 	'shared/*.lua',
 	'@ox_lib/init.lua',
-}
-
-chat_theme "chat-design-v2" {
-    styleSheet = "chat-design-v2.css"
 }
