@@ -7,7 +7,7 @@ name         'toffleeca'
 version      '1.0.0'
 description  'Jewels Robbery system'
 author       'ChrisToF29380'
-repository   'https://github.com/ChrisToFLuA/ToFFleeca'
+repository   'https://github.com/ChrisToFLuA/tofjewrobbery'
 
 server_scripts {
 	'@mysql-async/lib/MySQL.lua',
