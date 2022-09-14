@@ -2,6 +2,7 @@
 An Handmade script - Jewels Robbery
 - Discord link https://discord.gg/B45FXcrqCt
 - Video Preview : https://www.youtube.com/watch?v=ME7iPST5tJA
+- Forum link cfx : https://forum.cfx.re/t/free-esx-jewelry-robbery-esx-legacy-qtarget-ox-inventory-ox-lib/4910685
 
 # Dependencies
 - Esx Legacy (wasn't test on older verions)
