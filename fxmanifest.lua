@@ -3,7 +3,7 @@ games {'gta5'}
 lua54 'yes'
 
 name         'toffleeca'
-version      '1.0.0'
+version      '1.0.1'
 description  'Jewels Robbery system'
 author       'ChrisToF29380'
 repository   'https://github.com/ChrisToFLuA/tofjewrobbery'
