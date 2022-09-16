@@ -18,10 +18,10 @@ files{
 }
 
 server_scripts {
-	'server/serverrobbery.lua'
+	'server/*.lua'
 }
 
 client_scripts {
-	'client/clientrobbery.lua',
+	'client/*.lua',
 }
 
