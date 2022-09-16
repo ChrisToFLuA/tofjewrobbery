@@ -1,0 +1,16 @@
+{
+    "break_window": "Break the window",
+    "find_code": "Find Alarm Code",
+    "enter_code": "Enter Code",
+    "robbing_inprogress": "A Heist is already in progress, come back later",
+    "spam": "Breathe, it won't go any faster!",
+    "already_broken": "You've already flown in this window",
+    "inv_full": "Your inventory is full",
+    "loot": "You stole",
+    "no_code": "Nothing here",
+    "jewel_robbery": "Start the heist first",
+    "code": "Code Alarm",
+    "invalid_code": "Invalid code.",
+    "alarm_off": "Alarm off",
+    "alarm_notify": "Robbery in progress - Alarm GPS position"
+}
