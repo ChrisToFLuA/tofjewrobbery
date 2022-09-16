@@ -8,13 +8,11 @@ description  'Jewels Robbery system'
 author       'ChrisToF29380'
 repository   'https://github.com/ChrisToFLuA/tofjewrobbery'
 
+dependency 'ox_lib'
+
 shared_scripts {
 	'@es_extended/imports.lua',
 	'@ox_lib/init.lua'
-}
-
-files{
-    'locale/en.json'
 }
 
 server_scripts {
@@ -22,6 +20,10 @@ server_scripts {
 }
 
 client_scripts {
-	'client/*.lua',
+	'client/*.lua'
+}
+
+files{
+    'locales/*.json'
 }
 
