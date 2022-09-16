@@ -1,6 +1,5 @@
 fx_version 'cerulean'
 games {'gta5'}
-
 lua54 'yes'
 
 name         'toffleeca'
@@ -9,23 +8,20 @@ description  'Jewels Robbery system'
 author       'ChrisToF29380'
 repository   'https://github.com/ChrisToFLuA/tofjewrobbery'
 
+shared_scripts {
+	'@es_extended/imports.lua',
+	'@ox_lib/init.lua'
+}
+
+files{
+    'locale/en.json'
+}
+
 server_scripts {
-	'@mysql-async/lib/MySQL.lua',
-	'server/*.lua'
+	'server/serverrobbery.lua'
 }
 
 client_scripts {
-	'@PolyZone/client.lua',
-	'@PolyZone/BoxZone.lua',
-	'@PolyZone/EntityZone.lua',
-	'@PolyZone/CircleZone.lua',
-	'@PolyZone/ComboZone.lua',
-	'client/*.lua',
+	'client/clientrobbery.lua',
 }
 
-shared_scripts {
-	'@es_extended/locale.lua',
-	'locales/fr.lua',
-	'shared/*.lua',
-	'@ox_lib/init.lua',
-}
