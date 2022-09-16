@@ -6,7 +6,7 @@ local zonedonevit1, zonedonevit2, zonedonevit3, zonedonevit4, zonedonevit5, zone
 local count = 0
 local robstate = false
 
-lib.versionCheck('ChrisToFLuA/ToFFleeca')
+lib.versionCheck('ChrisToFLuA/tofjewrobbery')
 
 local function SetNextRob()
     nextrob = GetGameTimer() + RobberyCooldown
