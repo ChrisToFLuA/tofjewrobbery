@@ -5,30 +5,23 @@ local robstate = false
 local alarmcode = math.random(125362, 999999)
 local inputalrmcode = tonumber(0)
 
-if GetResourceState('ox_lib') == 'started' then
-    lib.locale()
-end
-
-Citizen.CreateThread(function()
-	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-		Citizen.Wait(0)
-	end
-    Wait(500)
-	while PlayerData == nil do
-        PlayerData = ESX.GetPlayerData()
-        Wait(10)
-    end	
-end)
+lib.locale()
 
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(xPlayer)
 	ESX.PlayerData = xPlayer
+	ESX.PlayerLoaded = true
+end)
+
+RegisterNetEvent('esx:onPlayerLogout')
+AddEventHandler('esx:onPlayerLogout', function()
+	ESX.PlayerLoaded = false
+	ESX.PlayerData = {}
 end)
 
 
 AddEventHandler('esx:onPlayerSpawn', function()
-    Citizen.Wait(30000)
+    Citizen.Wait(2000)
     Citizen.CreateThread(function()
         local jobs = {
             {name = 'police'},          -- LSPD in service
