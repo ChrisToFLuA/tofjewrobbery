@@ -19,10 +19,6 @@ AddEventHandler('tofjew:onrob', function(coord, zone)
     if #copsOnline >= mincops then
         if nextrob ~= 0 then
             if GetGameTimer() < nextrob then
-                for j=1, #copsOnline, 1 do
-                    local xPlayerx = copsOnline[j]
-                    TriggerClientEvent('tofjew:msgpolice', xPlayerx.source)
-                end
                 TriggerClientEvent('tofjew:onrobbing', xPlayer.source)
             end
             if GetGameTimer() > nextrob then
