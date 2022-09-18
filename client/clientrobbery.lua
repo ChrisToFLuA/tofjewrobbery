@@ -196,7 +196,7 @@ AddEventHandler('tofjew:breakglass', function(coord)
     Citizen.Wait(40000)
     TriggerServerEvent('tofjew:lootjewels', codealarm)
     Citizen.Wait(500)
-    PlaySound(-1, "PICK_UP", "HUD_FRONTEND_DEFAULT_SOUNDSET", 0, 0, 1)
+    PlaySoundFrontend(-1, "PICK_UP", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
     ClearPedTasksImmediately(PlayerPedId())        
 end)
 
