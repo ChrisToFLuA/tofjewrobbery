@@ -1,5 +1,6 @@
 local nextVitrin = 0
 local RobberyCooldown = 47000
+local alarm = GetSoundId()
 local codealarm = false
 local robstate = false
 local alarmcode = math.random(125362, 999999)
@@ -175,7 +176,7 @@ end)
 RegisterNetEvent('tofjew:breakglass')
 AddEventHandler('tofjew:breakglass', function(coord)
     if not codealarm then
-        PlaySoundFromCoord(GetSoundId(), "VEHICLES_HORNS_AMBULANCE_WARNING", -624.27, -232.19, 39.06, '', true, 10, false ) 
+        PlaySoundFromCoord(alarm, "VEHICLES_HORNS_AMBULANCE_WARNING", -624.27, -232.19, 39.06, '', true, 10, false ) 
     end
     SetnextVitrin()
     PlaySoundFromCoord(-1, 'Glass_Smash', coord.x, coord.y, coord.z, '', true, 5, false)
@@ -236,7 +237,7 @@ AddEventHandler('tofjew:codeinput', function()
         end
         if inputalrmcode == alarmcode then 
             codealarm = true
-            StopSound(GetSoundId())
+            StopSound(alarm)
             lib.showTextUI(locale('alarm_off'), {
                 position = "top-center",
                 icon = 'gun-squirt',
