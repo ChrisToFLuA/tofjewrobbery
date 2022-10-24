@@ -1,0 +1,16 @@
+{
+    "break_window": "Breek raam",
+    "find_code": "Zoek de Alarm Code",
+    "enter_code": "Toets Code In",
+    "robbing_inprogress": "Er is al een overval bezig, kom later terug",
+    "spam": "Adem, het gaat niet sneller!",
+    "already_broken": "Je hebt dit raam al gebroken",
+    "inv_full": "Je inventaris zit vol",
+    "loot": "Gestolen",
+    "no_code": "Er is hier niks",
+    "jewel_robbery": "Start overval eerst",
+    "code": "Alarm Code",
+    "invalid_code": "Foute code.",
+    "alarm_off": "Alarm uit",
+    "alarm_notify": "Er is een overval begonnen - Alarm GPS positie"
+}
